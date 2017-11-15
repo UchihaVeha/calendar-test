@@ -1,0 +1,29 @@
+{
+  "presets": [
+    [ "env", {
+      "modules": false
+    }],
+    "react",
+    "stage-0"
+  ],
+  "env": {
+    "production": {
+      "plugins": ["transform-react-remove-prop-types"]
+    },
+    "development": {
+      "plugins": [
+        "react-hot-loader/babel"
+      ]
+    },
+    "test": {
+      "presets": [
+        ["env", { "modules": "commonjs" }],
+        "stage-0"
+      ],
+      "plugins": [
+        "transform-es2015-modules-commonjs"
+      ]
+    }
+  }
+
+}
