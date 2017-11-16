@@ -2,7 +2,6 @@ const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
 const config = require('./dev.config');
 
-// Todo take out in something config file
 const PORT = 3009;
 const HOST = 'localhost';
 

@@ -17,7 +17,7 @@ const headHoursLabel = [
 
 const dayIds = ['mo', 'tu', 'we', 'th', 'fr', 'sa', 'su'];
 
-const styles = {
+export const styles = {
   table: {
     width: '100%',
     borderCollapse: 'collapse'
@@ -69,8 +69,8 @@ const styles = {
   }
 };
 
-class WeekCalendar extends React.PureComponent {
-  state = this.props.week;
+export class WeekCalendarComponent extends React.PureComponent {
+  state = this.props.days;
 
   componentDidMount() {
     document.documentElement.addEventListener('mouseup', this.onMouseUp);
@@ -129,7 +129,7 @@ class WeekCalendar extends React.PureComponent {
   };
 
   handleClearClick = () => {
-    this.setState(this.props.week);
+    this.setState(this.props.days);
   };
 
   render() {
@@ -173,10 +173,10 @@ class WeekCalendar extends React.PureComponent {
   }
 }
 
-WeekCalendar.propTypes = {
-  week: propTypes.object.isRequired,
+WeekCalendarComponent.propTypes = {
+  days: propTypes.object.isRequired,
   weekId: propTypes.number.isRequired,
   updateWeek: propTypes.func.isRequired
 };
 
-export default injectSheet(styles)(WeekCalendar);
+export default injectSheet(styles)(WeekCalendarComponent);

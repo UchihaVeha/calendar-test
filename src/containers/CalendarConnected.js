@@ -9,7 +9,7 @@ const CalendarConnected = props => <WeekCalendar {...props} />;
 
 const mapStateToProps = state => ({
   weekId: 0,
-  week: getWeekDaysByHours(state, 0)
+  days: getWeekDaysByHours(state, 0)
 });
 
 const mapDispatchToProps = dispatch =>
